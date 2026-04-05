@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenue sur Lunelos ✦</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A84C;--gold-lt:rgba(201,168,76,.12);--gold-bdr:rgba(201,168,76,.25);
+  --ink:#1A1714;--ink2:#3D3630;--ink3:#7A6F66;
+  --cream:#F5F2EE;--cream2:#EDE9E4;--white:#FFFFFF;--border:#E2DDD8;
+  --green:#27500A;--green-lt:#EAF3DE;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+}
+html,body{height:100%}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+
+/* Cercles décoratifs */
+.bg{position:absolute;inset:0;pointer-events:none}
+
+/* Contenu */
+.card{
+  position:relative;z-index:1;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:28px;padding:56px 52px;
+  max-width:520px;width:90%;text-align:center;
+  box-shadow:0 24px 60px rgba(26,23,20,.08);
+}
+
+/* Pastels déco sur la card */
+.dot-g{position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(193,221,151,.25);top:-40px;right:-40px;pointer-events:none}
+.dot-p{position:absolute;width:100px;height:100px;border-radius:50%;background:rgba(174,169,236,.2);bottom:-30px;left:-30px;pointer-events:none}
+
+.logo{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:36px}
+.logo-text{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--ink)}
+
+.check{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--green-lt);border:2px solid rgba(39,80,10,.2);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 28px;font-size:26px;
+}
+
+h1{
+  font-family:var(--serif);font-style:italic;
+  font-size:36px;font-weight:400;line-height:1.1;
+  color:var(--ink);margin-bottom:14px;
+}
+
+.sub{
+  font-size:15px;font-weight:300;color:var(--ink3);
+  line-height:1.75;margin-bottom:32px;
+}
+
+.details{
+  background:var(--cream);border:1.5px solid var(--border);
+  border-radius:16px;padding:18px 20px;margin-bottom:32px;text-align:left;
+}
+.detail-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
+.detail-row:last-child{border-bottom:none}
+.detail-label{color:var(--ink3);font-weight:300}
+.detail-value{color:var(--ink);font-weight:500}
+.detail-value.gold{color:var(--gold)}
+.detail-value.green{color:var(--green)}
+
+.btn{
+  display:block;width:100%;padding:14px;
+  background:var(--ink);border:none;border-radius:14px;
+  color:var(--white);font-family:var(--sans);font-size:15px;
+  font-weight:500;cursor:pointer;text-decoration:none;
+  transition:opacity .2s;margin-bottom:12px;
+}
+.btn:hover{opacity:.8}
+
+.countdown{
+  font-size:13px;color:var(--ink3);font-weight:300;margin-bottom:24px;
+}
+.countdown strong{color:var(--ink)}
+
+.links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.links a{font-size:12px;color:var(--ink3);text-decoration:none;transition:color .2s}
+.links a:hover{color:var(--gold)}
+
+/* Animation entrée */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.card{animation:fadeUp .6s ease forwards}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="bg">
+  <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <!-- Cercles or -->
+    <circle cx="720" cy="450" r="600" fill="none" stroke="#C9A84C" stroke-width="0.4" opacity="0.15"/>
+    <circle cx="720" cy="450" r="400" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.1"/>
+    <circle cx="720" cy="450" r="200" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.08"/>
+    <!-- Pastels de fond -->
+    <circle cx="150"  cy="150"  r="280" fill="rgba(193,221,151,.1)"/>
+    <circle cx="1300" cy="750"  r="240" fill="rgba(174,169,236,.08)"/>
+    <circle cx="1350" cy="200"  r="160" fill="rgba(201,168,76,.06)"/>
+    <circle cx="100"  cy="750"  r="120" fill="rgba(252,235,235,.3)"/>
+    <!-- Points or -->
+    <circle cx="300"  cy="80"   r="3"   fill="#C9A84C" opacity="0.4"/>
+    <circle cx="1150" cy="180"  r="2"   fill="#C9A84C" opacity="0.35"/>
+    <circle cx="500"  cy="820"  r="2.5" fill="#C9A84C" opacity="0.3"/>
+    <circle cx="1300" cy="500"  r="2"   fill="#C9A84C" opacity="0.3"/>
+  </svg>
+</div>
+
+<div class="card">
+  <div class="dot-g"></div>
+  <div class="dot-p"></div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <circle cx="19" cy="19" r="18" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="19" cy="19" r="13" fill="#F5F2EE" stroke="#C9A84C" stroke-width="1"/>
+      <circle cx="18" cy="19" r="7.5" fill="#C9A84C"/>
+      <circle cx="22" cy="17" r="6"   fill="#F5F2EE"/>
+    </svg>
+    <span class="logo-text">Lunelos</span>
+  </div>
+
+  <!-- Check -->
+  <div class="check">✓</div>
+
+  <h1>Bienvenue sur<br>Lunelos !</h1>
+
+  <p class="sub">
+    Votre abonnement est actif. Vous pouvez maintenant accéder à l'ensemble des fonctionnalités de Lunelos.
+  </p>
+
+  <!-- Détails abonnement -->
+  <div class="details">
+    <div class="detail-row">
+      <span class="detail-label">Statut</span>
+      <span class="detail-value green">✦ Actif</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Éditeur</span>
+      <span class="detail-value">Ecopatrimoine Conseil</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Support</span>
+      <span class="detail-value gold">contact@ecopatrimoine-conseil.com</span>
+    </div>
+  </div>
+
+  <!-- Countdown + bouton -->
+  <div class="countdown">Redirection automatique dans <strong id="count">5</strong> secondes…</div>
+
+  <a href="https://app.lunelos.fr" class="btn" id="cta">
+    Accéder à mon espace →
+  </a>
+
+  <div class="links">
+    <a href="index.html">Accueil</a>
+    <a href="cgu.html">CGU</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<script>
+// Countdown + redirection auto
+let n = 5
+const el = document.getElementById('count')
+const timer = setInterval(() => {
+  n--
+  el.textContent = n
+  if (n <= 0) {
+    clearInterval(timer)
+    window.location.href = 'https://app.lunelos.fr'
+  }
+}, 1000)
+
+// Clic immédiat annule le timer
+document.getElementById('cta').addEventListener('click', () => clearInterval(timer))
+</script>
+
+</body>
+</html>
