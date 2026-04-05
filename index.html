@@ -16,6 +16,7 @@
   --green-lt:#EAF3DE;--green:#27500A;--purple-lt:#EEEDFE;--purple:#534AB7;
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
   --r:16px;--rl:24px;
+  --green-lt:#EAF3DE;--purple-lt:#EEEDFE;--rose-lt:#FCEBEB;--blue-lt:#E6F1FB;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--ink);overflow-x:hidden}
@@ -144,8 +145,8 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
     <li><a href="#tarifs">Tarifs</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#connexion" class="btn-sm-out">Connexion</a>
-    <a href="#inscription" class="btn-sm-dark">Essai gratuit 30j</a>
+    <a href="auth.html" class="btn-sm-out">Connexion</a>
+    <a href="auth.html" class="btn-sm-dark">Essai gratuit 30j</a>
   </div>
 </nav>
 
@@ -165,11 +166,12 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
     </svg>
   </div>
 
+  <div style="font-size:11px;color:var(--ink3);margin-bottom:12px;font-weight:300">Par <strong style="color:var(--ink2)">Ecopatrimoine Conseil</strong></div>
   <div class="badge fu">Factur-X EN16931 · PDF/A-3B · TVA franchise</div>
   <h1 class="hero-title fu d1">La gestion simple des<br><em>formateurs indépendants</em></h1>
   <p class="hero-sub fu d2">Planning, facturation conforme, suivi TVA franchise. Tout ce dont vous avez besoin, rien de superflu.</p>
   <div class="hero-actions fu d3">
-    <a href="#inscription" class="btn-dark">Commencer l'essai gratuit</a>
+    <a href="auth.html" class="btn-dark">Commencer l'essai gratuit</a>
     <a href="#apercu" class="btn-light">Voir l'aperçu →</a>
   </div>
 
@@ -253,7 +255,7 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
   </div>
 </section>
 
-<section id="fonctionnalites" style="background:var(--white)">
+<section id="fonctionnalites" style="background:var(--white);position:relative;overflow:hidden"><div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:var(--green-lt);opacity:.5;pointer-events:none"></div><div style="position:absolute;bottom:-40px;left:-40px;width:150px;height:150px;border-radius:50%;background:var(--purple-lt);opacity:.4;pointer-events:none"></div>
   <div style="max-width:540px">
     <p class="slabel">Fonctionnalités</p>
     <h2 class="stitle">Tout ce qu'il vous faut,<br>rien de superflu</h2>
@@ -489,7 +491,7 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
   </div>
 </section>
 
-<section id="actualites" style="background:var(--white)">
+<section id="actualites" style="background:var(--white);position:relative;overflow:hidden"><div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:var(--blue-lt);opacity:.4;pointer-events:none"></div><div style="position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:var(--rose-lt);opacity:.35;pointer-events:none"></div>
   <p class="slabel">En continu</p>
   <h2 class="stitle">Actualités formation</h2>
   <p class="ssub">Le fil Centre Inffo dans votre espace. Mis à jour toutes les 2 heures.</p>
@@ -554,9 +556,9 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
     <input type="email" class="auth-input" placeholder="vous@exemple.fr">
     <label class="auth-label">Mot de passe</label>
     <input type="password" class="auth-input" placeholder="••••••••">
-    <button class="auth-btn">Se connecter</button>
+    <button class="auth-btn" onclick="window.location.href='auth.html'">Se connecter</button>
     <div class="auth-divider"><span>ou</span></div>
-    <div class="auth-switch">Pas encore de compte ? <a href="#inscription">Essai gratuit 30 jours →</a></div>
+    <div class="auth-switch">Pas encore de compte ? <a href="auth.html">Essai gratuit 30 jours →</a></div>
   </div>
 </div>
 
@@ -578,12 +580,18 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
     <input type="email" class="auth-input" placeholder="vous@exemple.fr">
     <label class="auth-label">Mot de passe</label>
     <input type="password" class="auth-input" placeholder="Minimum 8 caractères">
-    <button class="auth-btn">Créer mon compte gratuit</button>
+    <button class="auth-btn" onclick="window.location.href='auth.html'">Créer mon compte gratuit</button>
     <p style="font-size:11px;color:var(--ink3);text-align:center;margin-top:14px;font-weight:300;line-height:1.6">
       En créant un compte vous acceptez les <a href="#" style="color:var(--gold)">Conditions</a> et la <a href="#" style="color:var(--gold)">Politique de confidentialité</a>.
     </p>
-    <div class="auth-switch" style="margin-top:14px">Déjà un compte ? <a href="#connexion">Se connecter →</a></div>
+    <div class="auth-switch" style="margin-top:14px">Déjà un compte ? <a href="auth.html">Se connecter →</a></div>
   </div>
+</div>
+
+<!-- Bandeau cookies RGPD -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:rgba(255,255,255,.8);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:999;font-size:13px;font-weight:300;flex-wrap:wrap">
+  <span>Ce site utilise uniquement des cookies strictement nécessaires à son fonctionnement. Aucun cookie publicitaire. <a href="confidentialite.html" style="color:var(--gold);text-decoration:none">En savoir plus</a></span>
+  <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookies_ok','1')" style="padding:8px 20px;border-radius:999px;border:none;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap">J'ai compris</button>
 </div>
 
 <footer>
@@ -591,15 +599,16 @@ footer{background:var(--ink);padding:36px 48px;display:flex;align-items:center;j
   <ul class="flinks">
     <li><a href="#fonctionnalites">Fonctionnalités</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
-    <li><a href="mailto:contact@ecopatrimoine-conseil.com">Contact</a></li>
-    <li><a href="#">Mentions légales</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="cgu.html">CGU</a></li>
+    <li><a href="confidentialite.html">Confidentialité</a></li>
+    <li><a href="mentions-legales.html">Mentions légales</a></li>
   </ul>
-  <span class="fcopy">© 2026 Ecopatrimoine Conseil · Lunelos</span>
+  <span class="fcopy">© 2026 Ecopatrimoine Conseil · Lunelos est une marque d'Ecopatrimoine Conseil</span>
 </footer>
 
 <script>
-const t=document.getElementById('track')
-if(t){let d=false,sx,sl;t.addEventListener('mousedown',e=>{d=true;t.style.cursor='grabbing';sx=e.pageX-t.offsetLeft;sl=t.scrollLeft});t.addEventListener('mouseleave',()=>{d=false;t.style.cursor='grab'});t.addEventListener('mouseup',()=>{d=false;t.style.cursor='grab'});t.addEventListener('mousemove',e=>{if(!d)return;e.preventDefault();t.scrollLeft=sl-(e.pageX-t.offsetLeft-sx)*1.5})}
+if(localStorage.getItem('cookies_ok')) document.getElementById('cookie-banner').style.display='none'
 </script>
 </body>
 </html>
